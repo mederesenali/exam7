@@ -1,6 +1,6 @@
 package com.example.exam7.model;
 
-import Ocom.example.exam7.data.GenerateData;
+
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
