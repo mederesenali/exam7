@@ -1,29 +1,27 @@
 package com.example.exam7.model;
 
+import Ocom.example.exam7.data.GenerateData;
 import lombok.*;
-import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import java.util.ArrayList;
-import java.util.List;
 
 @Data
-@Document(collection = "restorans")
+@Document
 @Builder
 @NoArgsConstructor(access = AccessLevel.PRIVATE, force = true)
 @AllArgsConstructor
-public class Restoran {
+public
+class Food {
     @Id
     @GeneratedValue
-    String id;
-    String name;
-    String description;
-    @DBRef
-    List<Food> foods=new ArrayList<>();
+    private String id;
+
+    private String name;
+    private String type;
+
+    private int price;
 
 
 }
-
-
